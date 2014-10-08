@@ -15,7 +15,7 @@ dbfenphp
 	$params = array
 		(
 			'email' => 'demo@site.com',
-			'c_user_id' => 'self_defince_user_id'
+			'c_user_id' => 'self_define_user_id'
 		);
 
 	$response = $dbfen->User->create($params);
@@ -33,7 +33,7 @@ dbfenphp
 
 	$params = array
 		(
-			'c_user_id' => 'self_defince_user_id'
+			'c_user_id' => 'self_define_user_id'
 		);	
 
 	$response = $dbfen->User->Info($params);
