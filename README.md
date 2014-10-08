@@ -33,7 +33,7 @@ dbfenphp
 
 	$params = array
 		(
-			'c_user_id' => 'channel1-392'
+			'c_user_id' => 'self_defince_user_id'
 		);	
 
 	$response = $dbfen->User->Info($params);
