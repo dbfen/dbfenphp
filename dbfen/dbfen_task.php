@@ -238,7 +238,7 @@ class _DbfenTasK extends _DbfenBase {
 		return $this->GetResponse($this->buildUrl('dbf.task.info'));
 	}	
 
-	public function lists($params)
+	public function Lists($params)
 	{
 		$this->params['c_user_id'] = $params['c_user_id'];
 		return $this->GetResponse($this->buildUrl('dbf.task.list'));
