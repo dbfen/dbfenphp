@@ -38,7 +38,8 @@ class _DbfenHttp {
     {		
     	$response = array();
 
-        if ($this->useCurl) {
+        if ($this->useCurl) 
+        {
         	$http = _DbfenWebRequest::Instance($this->appKey, $this->appSecret);
 			$res = $http->Create($url, $method, $params);
 
@@ -51,13 +52,6 @@ class _DbfenHttp {
 			}
 
             $json = json_decode($res->Content, true);
-
-            if ($json)
-            {
-            	$response["code"] = $json["code"];
-            	$response["msg"] = $json["msg"];
-            	$response["data"] = $json["data"];
-            }
         }
         else 
         {
@@ -68,14 +62,14 @@ class _DbfenHttp {
         	}
 
             $json = json_decode($res, true);
-
-            if ($json)
-            {
-            	$response["code"] = $json["code"];
-            	$response["msg"] = $json["msg"];
-            	$response["data"] = $json["data"];
-            }
         }
+
+        if ($json)
+        {
+        	$response["code"] = $json["code"];
+        	$response["msg"] = $json["msg"];
+        	$response["data"] = $json["data"];
+        }        
 
         return $response;
     }   
