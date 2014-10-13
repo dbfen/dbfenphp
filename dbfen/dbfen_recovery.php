@@ -59,6 +59,6 @@ class _DbfenRecovery extends _DbfenBase {
 		$this->params['re_id'] = $params['re_id'];
 		$this->params['task_type'] = $params['task_type'];
 
-		return $this->GetResponse($this->buildUrl('dbf.movehouse.createdb'));	
+		return $this->GetResponse($this->buildUrl('dbf.recovery.info'));	
 	}
 }
