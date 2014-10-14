@@ -1,6 +1,6 @@
 dbfenphp
 ========
-多备份API PHP SDK, release v1.0.0[下载](https://github.com/dbfen/dbfenphp/archive/dbfenphp.zip)。
+多备份API PHP SDK, [release v1.0.0 发布](https://github.com/dbfen/dbfenphp/archive/v1.0.0.zip)。
 
 ## Requirement ##
 php 5.0以上版本即可，无额外需求。
