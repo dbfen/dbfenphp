@@ -1,15 +1,16 @@
-dbfenphp
+dbfenphp - 多备份API PHP SDK
 ========
 
-## Usage ##
+## 使用说明 ##
+### 接口引用 ###
+``` php
+require_once('dbfenphp.php');
+
+$dbfen =  new Dbfenphp('app key', 'app secret');
+```
 
 ### 用户接口 ###
 ``` php
-	#SDK 引用
-	require_once('dbfenphp.php');
-
-	$dbfen =  new Dbfenphp('app key', 'app secret');
-
 	#用户创建
 	$params = array
 		(
