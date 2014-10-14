@@ -1,6 +1,6 @@
 dbfenphp
 ========
-多备份API PHP SDK, [点击下载](https://github.com/goagent/goagent/releases/tag/v1.0.0)。
+多备份API PHP SDK, release v1.0.0[下载](https://github.com/dbfen/dbfenphp/archive/dbfenphp.zip)。
 
 ## Requirement ##
 php 5.0以上版本即可，无额外需求。
