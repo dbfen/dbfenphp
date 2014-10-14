@@ -9,15 +9,14 @@ php 5.0以上版本即可，无额外需求。
 ### 初始化 ###
 
 ``` php
-require_once('dbfenphp.php');
+	require_once('dbfenphp.php');
 
-$dbfen =  new Dbfenphp('app key', 'app secret');
+	$dbfen =  new Dbfenphp('app key', 'app secret');
 ```
 
-### 用户 ###
-
+### 用户接口 ###
+#### 创建用户 ####
 ``` php
-	#创建用户
 	$params = array
 		(
 			'email' => 'demo@site.com',
@@ -26,15 +25,7 @@ $dbfen =  new Dbfenphp('app key', 'app secret');
 
 	$response = $dbfen->User->create($params);
 
-	#用户信息查看
-	$params = array
-		(
-			'c_user_id' => 'self_define_user_id'
-		);	
-
-	$response = $dbfen->User->Info($params);
-
-	#获取用户信息
+	#结果查看，其他接口类似。
 	if (0 == $response['code'])
 	{
 		$data = $response['data'];
@@ -45,7 +36,17 @@ $dbfen =  new Dbfenphp('app key', 'app secret');
 	{
 		echo $response['msg'], "\n";
 		die;
-	}
+	}	
+```
+
+#### 用户信息查看 ####
+``` php
+	$params = array
+		(
+			'c_user_id' => 'self_define_user_id'
+		);	
+
+	$response = $dbfen->User->Info($params);
 ```
 
 ### 任务 ###
