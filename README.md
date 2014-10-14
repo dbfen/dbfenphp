@@ -14,8 +14,9 @@ php 5.0以上版本即可，无额外需求。
 	$dbfen =  new Dbfenphp('app key', 'app secret');
 ```
 
-### 用户接口 ###
-#### 创建用户 ####
+### 用户接口(http://www.dbfen.com/index.php/help/api) ###
+
+#### 1.创建用户 ####
 ``` php
 	$params = array
 		(
@@ -39,7 +40,7 @@ php 5.0以上版本即可，无额外需求。
 	}	
 ```
 
-#### 用户信息查看 ####
+#### 2.用户信息查看 ####
 ``` php
 	$params = array
 		(
