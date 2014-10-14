@@ -1,11 +1,12 @@
-dbfenphp - 多备份API PHP SDK
+dbfenphp
 ========
+多备份API PHP SDK, [点击下载](https://github.com/goagent/goagent/releases/tag/v1.0.0)。
 
 ## Requirement ##
 php 5.0以上版本即可，无额外需求。
 
 ## Usage ##
-关于API的详细说明可以到[多备份官网](http://www.dbfen.com/index.php/help/api) 查看
+关于API的详细说明可以到[多备份官网](http://www.dbfen.com/index.php/help/api)查看
 ### 初始化 ###
 
 ``` php
@@ -16,7 +17,7 @@ php 5.0以上版本即可，无额外需求。
 
 ### 用户接口 ###
 
-1.创建用户
+1. 创建用户
 ``` php
 	$params = array
 		(
@@ -40,7 +41,7 @@ php 5.0以上版本即可，无额外需求。
 	}	
 ```
 
-2.用户信息查看
+2. 用户信息查看
 ``` php
 	$params = array
 		(
@@ -52,7 +53,7 @@ php 5.0以上版本即可，无额外需求。
 
 ### 任务 ###
 
-1.创建网站托管任务
+1. 创建网站托管任务
 ``` php
 	$params = array
 		(
@@ -66,7 +67,7 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Task->Createsite($params);
 ``` 
 
-2.创建数据库托管任务
+2. 创建数据库托管任务
 ``` php
 	$params = array
 		(
@@ -80,7 +81,7 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Task->Createdb($params);
 ``` 
 
-3.创建客户端任务
+3. 创建客户端任务
 ``` php
 	$params = array
 		(
@@ -92,7 +93,7 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Task->Createclient($params);
 ``` 
 
-4.创建客户端数据库任务
+4. 创建客户端数据库任务
 ``` php
 	$params = array
 		(
@@ -105,7 +106,7 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Task->Createclientdb($params);	
 ``` 
 
-5.删除单个任务
+5. 删除单个任务
 ``` php
 	$params = array
 		(
@@ -117,7 +118,7 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Task->Delete($params);		
 ``` 
 
-6.开始备份任务
+6. 开始备份任务
 ``` php
 	$params = array
 		(
@@ -129,7 +130,7 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Task->Start($params);		
 ``` 
 
-7.获取任务最新的进度信息
+7. 获取任务最新的进度信息
 ``` php
 	$params = array
 		(
@@ -141,7 +142,7 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Task->Latestprogress($params);	
 ``` 
 
-8.获取任务备份历史记录
+8. 获取任务备份历史记录
 ``` php
 	$params = array
 		(
@@ -155,7 +156,7 @@ php 5.0以上版本即可，无额外需求。
 
 ### 恢复 ###
 
-1.创建恢复任务
+1. 创建恢复任务
 ``` php
 	$params = array
 		(
@@ -167,7 +168,7 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Recovery->Create($params);	
 ``` 
 
-2.获取恢复任务信息
+2. 获取恢复任务信息
 ``` php
 	$params = array
 		(
@@ -179,7 +180,7 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Recovery->Info($params);
 ``` 
 
-3.获取恢复任务列表
+3. 获取恢复任务列表
 ``` php
 	$params = array
 		(
@@ -192,7 +193,7 @@ php 5.0以上版本即可，无额外需求。
 
 ### 迁移 ###
 
-1.创建网站迁移任务
+1. 创建网站迁移任务
 ``` php
 	$params = array
 		(
@@ -207,7 +208,7 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Movehouse->Createsite($params);	
 ``` 
 
-2.创建数据迁移任务
+2. 创建数据迁移任务
 ``` php
 	$params = array
 		(
@@ -222,7 +223,7 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Movehouse->Createdb($params);		
 ``` 
 
-3.获取迁移任务信息
+3. 获取迁移任务信息
 ``` php
 	$params = array
 		(
@@ -234,7 +235,7 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Movehouse->Info($params);
 ``` 
 
-4.获取迁移任务列表
+4. 获取迁移任务列表
 ``` php
 	$params = array
 		(
