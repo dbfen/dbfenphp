@@ -5,7 +5,7 @@ dbfenphp - 多备份API PHP SDK
 php 5.0以上版本即可，无额外需求。
 
 ## Usage ##
-关于API的详细说明可以到多备份官网(http://www.dbfen.com/index.php/help/api)查看
+关于API的详细说明可以到[多备份官网](http://www.dbfen.com/index.php/help/api) 查看
 ### 初始化 ###
 
 ``` php
