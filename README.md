@@ -1,8 +1,13 @@
 dbfenphp - 多备份API PHP SDK
 ========
 
-## 使用说明 ##
-### 接口引用 ###
+## Requirement ##
+php 5.0以上版本即可，无额外需求。
+
+## Usage ##
+
+### SDK初始化 ###
+
 ``` php
 require_once('dbfenphp.php');
 
@@ -10,6 +15,7 @@ $dbfen =  new Dbfenphp('app key', 'app secret');
 ```
 
 ### 用户接口 ###
+
 ``` php
 	#用户创建
 	$params = array
