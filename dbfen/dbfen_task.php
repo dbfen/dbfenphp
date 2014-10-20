@@ -132,7 +132,7 @@ class _DbfenTasK extends _DbfenBase {
 	public function Createclient($params)
 	{
 		$this->params['c_user_id'] = $params['c_user_id'];
-		$this->params['target_host'] = $params['target_host'];	
+		$this->params['pub_key'] = $params['pub_key'];	
 		$this->params['backup_dir'] = $params['backup_dir'];		
 
 		if (isset($params['taskname']))
@@ -146,7 +146,7 @@ class _DbfenTasK extends _DbfenBase {
 	public function Createclientdb($params)
 	{
 		$this->params['c_user_id'] = $params['c_user_id'];
-		$this->params['target_host'] = $params['target_host'];	
+		$this->params['pub_key'] = $params['pub_key'];	
 		$this->params['dname'] = $params['dname'];	
 		$this->params['backup_dir'] = $params['backup_dir'];		
 

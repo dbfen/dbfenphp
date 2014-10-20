@@ -86,7 +86,7 @@ php 5.0以上版本即可，无额外需求。
 	$params = array
 		(
 			'c_user_id' => 'self_define_user_id',
-			'target_host' => 'backup_site.com',
+			'pub_key' => public_key_in_target_host_dbfen_ini,
 			'backup_dir' => '/backup_path'
 		);	
 
@@ -98,7 +98,7 @@ php 5.0以上版本即可，无额外需求。
 	$params = array
 		(
 			'c_user_id' => 'self_define_user_id',
-			'target_host' => 'backup_site.com',
+			'pub_key' => public_key_in_target_host_dbfen_ini,
 			'backup_dir' => '/backup_tmp_path',
 			'dname' => 'database_name'
 		);	
