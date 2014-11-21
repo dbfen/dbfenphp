@@ -43,9 +43,11 @@ class _DbfenHttp {
         	$http = _DbfenWebRequest::Instance($this->appKey, $this->appSecret);
 			$res = $http->Create($url, $method, $params);
 
-			if (null == $res)
+			if (null == $res) 
+			{
 				return array('code' => -1, 'msg' => 'HTTP请求失败');
-
+			}
+	
 			if (200 != $res->Info['http_code']) 
 			{
 				return array('code' => -1, 'msg' => 'HTTP CODE: ' . $res->Info['http_code']);
