@@ -34,47 +34,54 @@ class _DbfenHttp {
 		$this->useCurl = self::HasCurl() ? true : false;		
 	}
 
-    public function GetResponse($url, $params=null, $method='POST')
-    {		
-    	$response = array();
+	public function GetResponse($url, $params=null, $method='POST')
+	{		
+		$response = array();
+		$json = array();
 
-        if ($this->useCurl) 
-        {
-        	$http = _DbfenWebRequest::Instance($this->appKey, $this->appSecret);
+		if ($this->useCurl) 
+		{
+			$http = _DbfenWebRequest::Instance($this->appKey, $this->appSecret);
 			$res = $http->Create($url, $method, $params);
 
 			if (null == $res) 
 			{
 				return array('code' => -1, 'msg' => 'HTTP请求失败');
 			}
+
+			$response['content'] = $res->Content;
 	
 			if (200 != $res->Info['http_code']) 
 			{
-				return array('code' => -1, 'msg' => 'HTTP CODE: ' . $res->Info['http_code']);
+				$json =  array('code' => -1, 'msg' => 'HTTP CODE: ' . $res->Info['http_code']);
+			}
+			else
+			{
+				$json = json_decode($res->Content, true);
+			}			
+		}
+		else 
+		{
+			$res = $this->CreateWithoutCurl($url, $params);
+
+			if (empty($res))
+			{
+				return array('code' => -1, 'msg' => 'HTTP EROOR');
 			}
 
-            $json = json_decode($res->Content, true);
-        }
-        else 
-        {
-        	$res = $this->CreateWithoutCurl($url, $params);
-        	if (empty($res))
-        	{
-        		return array('code' => -1, 'msg' => 'HTTP EROOR');
-        	}
+			$response['content'] = $res;
+			$json = json_decode($res, true);
+		}
 
-            $json = json_decode($res, true);
-        }
+		if ($json)
+		{
+			$response["code"] = $json["code"];
+			$response["msg"] = $json["msg"];
+			$response["data"] = $json["data"];
+		}
 
-        if ($json)
-        {
-        	$response["code"] = $json["code"];
-        	$response["msg"] = $json["msg"];
-        	$response["data"] = $json["data"];
-        }        
-
-        return $response;
-    }   
+		return $response;
+	}   
 
 	public function CreateWithoutCurl($url, $params = array(), $method = 'POST')
 	{
@@ -106,12 +113,12 @@ class _DbfenHttp {
 			default:
 				return null;
 		}			
-	}	    
+	}		
 
-    private static function HasCurl()
-    {
-        return function_exists('curl_init');
-    }             
+	private static function HasCurl()
+	{
+		return function_exists('curl_init');
+	}			 
 }
 
 class _DbfenWebRequest
