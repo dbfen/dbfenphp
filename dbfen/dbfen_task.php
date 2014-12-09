@@ -199,7 +199,7 @@ class _DbfenTasK extends _DbfenBase {
 	    $this->params['task_type'] = $params['task_type'];
 	    $this->params['fields'] = $params['fields'];
 	    
-        return $this->GetResponse($this->buildUrl('dbf.task.setting'));
+	    return $this->GetResponse($this->buildUrl('dbf.task.setting'));
 	}
 
 	public function Start($params)
