@@ -118,7 +118,20 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Task->Delete($params);		
 ``` 
 
-6.开始备份任务
+6.编辑单个任务
+``` php
+	$params = array
+		(
+			'c_user_id' => 'self_define_user_id',
+			'task_id' => task_id,
+			'task_type' => task_type,
+			'field' => 'json_field_data'
+		);	
+
+	$response = $dbfen->Task->Edit($params);		
+``` 
+
+7.开始备份任务
 ``` php
 	$params = array
 		(
@@ -130,7 +143,7 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Task->Start($params);		
 ``` 
 
-7.获取任务最新的进度信息
+8.获取任务最新的进度信息
 ``` php
 	$params = array
 		(
@@ -142,7 +155,7 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Task->Latestprogress($params);	
 ``` 
 
-8.获取任务备份历史记录
+9.获取任务备份历史记录
 ``` php
 	$params = array
 		(

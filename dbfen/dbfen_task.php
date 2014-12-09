@@ -188,8 +188,18 @@ class _DbfenTasK extends _DbfenBase {
 		$this->params['c_user_id'] = $params['c_user_id'];
 		$this->params['task_id'] = $params['task_id'];	
 		$this->params['task_type'] = $params['task_type'];
-
+		
 		return $this->GetResponse($this->buildUrl('dbf.task.delete'));
+	}
+	
+	public function Edit($params)
+	{
+	    $this->params['c_user_id'] = $params['c_user_id'];
+	    $this->params['task_id'] = $params['task_id'];
+	    $this->params['task_type'] = $params['task_type'];
+	    $this->params['fields'] = $params['fields'];
+	    
+        return $this->GetResponse($this->buildUrl('dbf.task.setting'));
 	}
 
 	public function Start($params)
