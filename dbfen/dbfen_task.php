@@ -251,6 +251,16 @@ class _DbfenTasK extends _DbfenBase {
 	public function Lists($params)
 	{
 		$this->params['c_user_id'] = $params['c_user_id'];
+		
 		return $this->GetResponse($this->buildUrl('dbf.task.list'));
-	}		
+	}
+	
+	public function Download($params)
+	{
+	    $this->params['c_user_id'] = $params['c_user_id'];
+	    $this->params['history_id'] = $params['history_id'];
+	    $this->params['task_type'] = $params['task_type'];
+	    
+	    return $this->GetResponse($this->buildUrl('dbf.task.getdownloadurl'));
+	}
 }

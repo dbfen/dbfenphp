@@ -167,6 +167,18 @@ php 5.0以上版本即可，无额外需求。
 	$response = $dbfen->Task->History($params);					
 ```
 
+10.获取托管任务的直接下载链接
+``` php
+	$params = array
+		(
+			'c_user_id' => 'self_define_user_id',
+			'history_id' => history_id,
+			'task_type' => task_type
+		);	
+
+	$response = $dbfen->Task->Download($params);					
+```
+
 ### 恢复 ###
 
 1.创建恢复任务
